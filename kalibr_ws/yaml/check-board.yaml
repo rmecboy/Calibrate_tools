@@ -1,0 +1,9 @@
+target_type: 'checkerboard' 
+ 
+targetCols: 11                  //内角的个数
+ 
+targetRows: 8                  
+ 
+colSpacingMeters: 0.015               
+ 
+rowSpacingMeters: 0.015  

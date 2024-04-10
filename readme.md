@@ -10,17 +10,38 @@
 ## 工程目录结构
 
 ```shell
-kalibr_ws
-    ├── src
-    │   ├── CMakeLists.txt
-    │   ├── code_utils
-    │   ├── imu_utils
-    │   └── kalibr
-    └── yaml
-        ├── april.yaml
-        ├── check-board.yaml
-        ├── imu.yaml  此文件为imu_utils生成的imu标定参数
-        └── stereo_calibra1-camchain.yaml 此文件为kalibr生成的双目标定参数（可结合imu.yaml用于联合标定）
+├── kalibr_ws
+│   ├── collect_imu_data.sh
+│   ├── src
+│   │   ├── CMakeLists.txt
+│   │   ├── code_utils
+│   │   ├── imu_utils
+│   │   ├── kalibr
+│   │   └── serial_port
+│   └── yaml
+│       ├── april.yaml
+│       ├── check-board.yaml
+│       ├── imu.yaml 此文件为imu_utils生成的imu标定参数
+│       └── stereo_calibra1-camchain.yaml 此文件为kalibr生成的双目标定参数（可结合imu.yaml用于联合标定）
+├── readme.md
+└── stm32-imu_cali_proj
+    ├── application
+    ├── basic_framework.ioc
+    ├── bsp
+    ├── build
+    ├── Drivers
+    ├── Inc
+    ├── LICENSE
+    ├── Makefile
+    ├── Middlewares
+    ├── modules
+    ├── openocd_dap.cfg
+    ├── openocd_jlink.cfg
+    ├── Src
+    ├── startup_stm32f407xx.s
+    ├── STM32F407IGHx_FLASH.ld
+    ├── STM32F407.svd
+    └── stm32.jflash
 ```
 ### 前置准备
 #### 标定包编译环节

@@ -1,0 +1,23 @@
+<launch>
+
+    <rosparam file="$(find serial_port)/serial_param/param.yaml" />
+
+    <node pkg="serial_port" type="serial_port_node" name="serial_port_node" output="screen"> </node>
+    
+    <node pkg="rosbag" type="record" name="bag_record" output="screen" 
+            args="/imu/data_raw -o $(find serial_port)/record_bags/imu_raw_data.bag" />
+
+    <!-- <node pkg="imu_complementary_filter" type="complementary_filter_node"
+        name="complementary_filter_gain_node" output="screen">
+        <param name="do_bias_estimation" value="true"/>
+        <param name="do_adaptive_gain" value="true"/>
+        <param name="use_mag" value="false"/>
+        <param name="gain_acc" value="0.01"/>
+        <param name="gain_mag" value="0.01"/>
+        <param name="publish_debug_topics" value="false"/>
+        <param name="publish_tf" value="true"/>
+    </node>
+
+    <node pkg="rviz" type="rviz" name="display" args="-d $(find serial_port)/rviz_config/my_rviz.rviz" required="true"/> -->
+
+</launch>

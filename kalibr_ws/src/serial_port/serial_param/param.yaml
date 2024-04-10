@@ -1,0 +1,4 @@
+
+serial_port_name : "/dev/ttyACM0"
+
+serial_baud_rate : 115200

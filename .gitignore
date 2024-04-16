@@ -3,3 +3,4 @@ kalibr_ws/build
 kalibr_ws/devel
 kalibr_ws/logs
 .catkin_tools
+kalibr_ws/src/serial_port/record_bags
